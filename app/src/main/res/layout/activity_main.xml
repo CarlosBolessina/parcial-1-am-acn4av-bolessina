@@ -30,6 +30,27 @@
             android:layout_height="wrap_content"
             android:hint="Escribí un nombre" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrumento principal" />
+
+        <Spinner
+
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerInstrumento"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tonalidad" />
+
+        <Spinner
+            android:id="@+id/spinnerTonalidad"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </ScrollView>
