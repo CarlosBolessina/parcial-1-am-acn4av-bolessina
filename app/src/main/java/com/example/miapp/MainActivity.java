@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         EditText idea = findViewById(R.id.edtIdea);
 
         Button guardar = findViewById(R.id.btnGuardar);
+        Button limpiar = findViewById(R.id.btnLimpiar);
 
 
 
@@ -77,6 +78,16 @@ public class MainActivity extends AppCompatActivity {
                     + "\nIdea: " + ideaTexto;
 
             Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
+        });
+
+        limpiar.setOnClickListener(v -> {
+
+            nombre.setText("");
+            tempo.setText("");
+            idea.setText("");
+
+            instrumento.setSelection(0);
+            tonalidad.setSelection(0);
         });
     }
 }
