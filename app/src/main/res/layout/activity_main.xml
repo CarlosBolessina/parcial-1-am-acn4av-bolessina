@@ -51,6 +51,18 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo (BPM)" />
+
+        <EditText
+            android:id="@+id/edtTempo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Ejemplo: 120"
+            android:inputType="number" />
+
     </LinearLayout>
 
 </ScrollView>
