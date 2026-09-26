@@ -8,12 +8,26 @@ import android.widget.ArrayAdapter;
 
 import android.widget.Spinner;
 
+import android.widget.Button;
+
+import android.widget.EditText;
+
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        EditText nombre = findViewById(R.id.edtNombre);
+        EditText tempo = findViewById(R.id.edtTempo);
+        EditText idea = findViewById(R.id.edtIdea);
+
+        Button guardar = findViewById(R.id.btnGuardar);
+
+
 
         Spinner instrumento = findViewById(R.id.spinnerInstrumento);
         String[] instrumentos = {
@@ -49,5 +63,20 @@ public class MainActivity extends AppCompatActivity {
         );
 
         tonalidad.setAdapter(adapterTonalidad);
+
+        guardar.setOnClickListener(v -> {
+
+            String nombreTexto = nombre.getText().toString();
+            String tempoTexto = tempo.getText().toString();
+            String ideaTexto = idea.getText().toString();
+
+            String mensaje = "Composición: " + nombreTexto
+                    + "\nInstrumento: " + instrumento.getSelectedItem().toString()
+                    + "\nTonalidad: " + tonalidad.getSelectedItem().toString()
+                    + "\nTempo: " + tempoTexto
+                    + "\nIdea: " + ideaTexto;
+
+            Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
+        });
     }
 }

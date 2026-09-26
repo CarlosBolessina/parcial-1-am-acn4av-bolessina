@@ -26,6 +26,7 @@
             android:text="Nombre de la composición" />
 
         <EditText
+            android:id="@+id/edtNombre"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="Escribí un nombre" />
@@ -75,6 +76,12 @@
             android:hint="Describí tu idea musical"
             android:gravity="top"
             android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
 
     </LinearLayout>
 
