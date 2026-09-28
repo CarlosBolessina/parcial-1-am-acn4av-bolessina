@@ -30,7 +30,29 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+        Spinner genero = findViewById(R.id.spinnerGenero);
+
+        String[] generos = {
+                "Rock",
+                "Pop",
+                "Jazz",
+                "Electrónica",
+                "Folklore",
+                "Otro"
+        };
+
+        ArrayAdapter<String> adapterGenero = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                generos
+        );
+
+        genero.setAdapter(adapterGenero);
+
         Spinner instrumento = findViewById(R.id.spinnerInstrumento);
+
         String[] instrumentos = {
                 "Piano",
                 "Guitarra",
@@ -72,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             String ideaTexto = idea.getText().toString();
 
             String mensaje = "Composición: " + nombreTexto
+                    + "\nGénero: " + genero.getSelectedItem().toString()
                     + "\nInstrumento: " + instrumento.getSelectedItem().toString()
                     + "\nTonalidad: " + tonalidad.getSelectedItem().toString()
                     + "\nTempo: " + tempoTexto
