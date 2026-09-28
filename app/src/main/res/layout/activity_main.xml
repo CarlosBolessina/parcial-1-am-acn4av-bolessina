@@ -7,59 +7,74 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#21199C"
         android:orientation="vertical"
         android:padding="24dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
             android:text="Mi Compositor"
             android:textSize="28sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="24dp" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de la composición" />
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Nombre de la composición"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edtNombre"
-            android:layout_width="250dp"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:hint="Escribí un nombre" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Instrumento principal" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Instrumento principal"
+            android:textSize="16sp" />
 
         <Spinner
 
-            android:layout_width="250dp"
+            android:id="@+id/spinnerInstrumento"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinnerInstrumento"/>
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tonalidad" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Tonalidad"
+            android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/spinnerTonalidad"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content" />
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tempo (BPM)" />
+            android:text="Tempo (BPM)"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edtTempo"
-            android:layout_width="250dp"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:hint="Ejemplo: 120"
             android:inputType="number" />
@@ -67,26 +82,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Idea musical" />
+            android:layout_marginTop="16dp"
+            android:text="Idea musical"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edtIdea"
-            android:layout_width="250dp"
+            android:layout_width="363dp"
             android:layout_height="120dp"
-            android:hint="Describí tu idea musical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:gravity="top"
+            android:hint="Describí tu idea musical"
             android:inputType="textMultiLine" />
 
         <Button
             android:id="@+id/btnGuardar"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_width="363dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="Guardar" />
 
         <Button
             android:id="@+id/btnLimpiar"
-            android:layout_width="250dp"
+            android:layout_width="363dp"
             android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="Limpiar" />
 
     </LinearLayout>
