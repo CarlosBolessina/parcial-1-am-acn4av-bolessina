@@ -61,13 +61,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Instrumento principal"
+                android:text="Instrumentos del proyecto"
                 android:textSize="16sp" />
 
             <Spinner
                 android:id="@+id/spinnerInstrumento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnAgregarInstrumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="+ Agregar instrumento" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Instrumentos seleccionados:"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/contenedorInstrumentos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginBottom="16dp" />
 
             <TextView

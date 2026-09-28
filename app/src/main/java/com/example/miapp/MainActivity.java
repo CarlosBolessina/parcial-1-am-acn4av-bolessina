@@ -14,6 +14,10 @@ import android.widget.EditText;
 
 import android.widget.Toast;
 
+import android.widget.TextView;
+
+import android.widget.LinearLayout;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button guardar = findViewById(R.id.btnGuardar);
         Button limpiar = findViewById(R.id.btnLimpiar);
+        Button agregarInstrumento = findViewById(R.id.btnAgregarInstrumento);
+        LinearLayout contenedorInstrumentos = findViewById(R.id.contenedorInstrumentos);
 
 
 
@@ -93,14 +99,40 @@ public class MainActivity extends AppCompatActivity {
             String tempoTexto = tempo.getText().toString();
             String ideaTexto = idea.getText().toString();
 
+            String instrumentosTexto = "";
+
+            for (int i = 0; i < contenedorInstrumentos.getChildCount(); i++) {
+
+                TextView tv = (TextView) contenedorInstrumentos.getChildAt(i);
+
+                instrumentosTexto += tv.getText().toString();
+
+                if (i < contenedorInstrumentos.getChildCount() - 1) {
+                    instrumentosTexto += ", ";
+                }
+            }
+
             String mensaje = "Composición: " + nombreTexto
                     + "\nGénero: " + genero.getSelectedItem().toString()
-                    + "\nInstrumento: " + instrumento.getSelectedItem().toString()
+                    + "\nInstrumentos: " + instrumentosTexto
                     + "\nTonalidad: " + tonalidad.getSelectedItem().toString()
                     + "\nTempo: " + tempoTexto
                     + "\nIdea: " + ideaTexto;
 
             Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
+        });
+
+        agregarInstrumento.setOnClickListener(v -> {
+
+            String instrumentoSeleccionado =
+                    instrumento.getSelectedItem().toString();
+
+            TextView nuevoInstrumento = new TextView(this);
+
+            nuevoInstrumento.setText(instrumentoSeleccionado);
+            nuevoInstrumento.setTextSize(16);
+
+            contenedorInstrumentos.addView(nuevoInstrumento);
         });
 
         limpiar.setOnClickListener(v -> {
@@ -111,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
             instrumento.setSelection(0);
             tonalidad.setSelection(0);
+            contenedorInstrumentos.removeAllViews();
         });
     }
 }
