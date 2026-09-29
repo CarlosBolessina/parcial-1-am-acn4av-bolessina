@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">MiApp</string>
+
+    <string name="app_name">Mi Composición Musical</string>
+
+    <string name="titulo_principal">Mi Composición Musical</string>
+    <string name="subtitulo_nuevo_proyecto">Nuevo proyecto de composición</string>
+
+    <string name="label_nombre">Nombre del proyecto</string>
+    <string name="hint_nombre">Ingresá el nombre del proyecto</string>
+
+    <string name="label_genero">Género musical</string>
+
+    <string name="label_instrumentos">Instrumentos del proyecto</string>
+    <string name="boton_agregar_instrumento">+ Agregar instrumento</string>
+    <string name="label_instrumentos_seleccionados">Instrumentos seleccionados:</string>
+
+    <string name="label_tonalidad">Tonalidad</string>
+    <string name="hint_tempo">Ingresá el tempo en BPM</string>
+
+    <string name="label_tempo">Tempo</string>
+    <string name="label_idea">Idea musical</string>
+    <string name="hint_idea">Escribí una idea para tu composición</string>
+
+    <string name="boton_limpiar">Limpiar</string>
+    <string name="boton_crear">Crear proyecto</string>
+
+    <string name="descripcion_imagen_musica">Imagen relacionada con composición musical</string>
+
 </resources>

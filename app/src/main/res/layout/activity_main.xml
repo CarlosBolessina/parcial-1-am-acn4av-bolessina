@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
-                android:text="Mi Composición Musical"
+                android:text="@string/titulo_principal"
                 android:textSize="28sp"
                 android:textColor="#172554"
                 android:textStyle="bold" />
@@ -41,13 +41,13 @@
                 android:layout_marginBottom="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/musica"
-                android:contentDescription="Imagen relacionada con composición musical" />
+                android:contentDescription="@string/descripcion_imagen_musica" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
-                android:text="Nuevo proyecto de composición"
+                android:text="@string/subtitulo_nuevo_proyecto"
                 android:textSize="20sp"
                 android:textColor="#334155"
                 android:textStyle="bold" />
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:text="Nombre del proyecto"
+                android:text="@string/label_nombre"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -67,13 +67,13 @@
                 android:layout_marginBottom="40dp"
                 android:backgroundTint="#94A3B8"
                 android:textColor="#334155"
-                android:hint="Escribí un nombre" />
+                android:hint="@string/hint_nombre" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Género musical"
+                android:text="@string/label_genero"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Instrumentos del proyecto"
+                android:text="@string/label_instrumentos"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -108,13 +108,13 @@
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#60A5FA"
                 android:textColor="#FFFFFF"
-                android:text="+ Agregar instrumento" />
+                android:text="@string/boton_agregar_instrumento" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Instrumentos seleccionados:"
+                android:text="@string/label_instrumentos_seleccionados"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -128,7 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Tonalidad"
+                android:text="@string/label_tonalidad"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Tempo (BPM)"
+                android:text="@string/hint_tempo"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
-                android:hint="Ejemplo: 120"
+                android:hint="@string/label_tempo"
                 android:backgroundTint="#94A3B8"
                 android:textColor="#334155"
                 android:inputType="number" />
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Idea musical"
+                android:text="@string/label_idea"
                 android:textColor="#334155"
                 android:textSize="18sp" />
 
@@ -172,7 +172,7 @@
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="top"
-                android:hint="Describí tu idea musical"
+                android:hint="@string/hint_idea"
                 android:backgroundTint="#94A3B8"
                 android:textColor="#334155"
                 android:inputType="textMultiLine" />
@@ -189,7 +189,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="#94A3B8"
                     android:textColor="#FFFFFF"
-                    android:text="Limpiar" />
+                    android:text="@string/boton_limpiar" />
 
                 <Button
                     android:id="@+id/btnGuardar"
@@ -199,7 +199,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="#2563EB"
                     android:textColor="#FFFFFF"
-                    android:text="Crear proyecto" />
+                    android:text="@string/boton_crear" />
 
             </LinearLayout>
 
