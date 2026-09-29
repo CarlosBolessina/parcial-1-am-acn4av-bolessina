@@ -129,8 +129,38 @@ public class MainActivity extends AppCompatActivity {
 
             TextView nuevoInstrumento = new TextView(this);
 
-            nuevoInstrumento.setText(instrumentoSeleccionado);
+            String simbolo = "🎵";
+
+            if (instrumentoSeleccionado.equals("Piano")) {
+                simbolo = "🎹";
+            } else if (instrumentoSeleccionado.equals("Guitarra")) {
+                simbolo = "🎸";
+            } else if (instrumentoSeleccionado.equals("Bajo")) {
+                simbolo = "🎸";
+            } else if (instrumentoSeleccionado.equals("Violín")) {
+                simbolo = "🎻";
+            } else if (instrumentoSeleccionado.equals("Batería")) {
+                simbolo = "🥁";
+            }
+
+            nuevoInstrumento.setText(simbolo + " " + instrumentoSeleccionado);
             nuevoInstrumento.setTextSize(16);
+
+            nuevoInstrumento.setPadding(16, 12, 16, 12);
+
+            LinearLayout.LayoutParams parametros =
+                    new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                    );
+
+            parametros.setMargins(0, 0, 0, 8);
+
+            nuevoInstrumento.setLayoutParams(parametros);
+
+            nuevoInstrumento.setBackgroundResource(
+                    android.R.drawable.editbox_background
+            );
 
             contenedorInstrumentos.addView(nuevoInstrumento);
         });
