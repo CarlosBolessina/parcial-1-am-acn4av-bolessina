@@ -96,9 +96,24 @@ public class MainActivity extends AppCompatActivity {
         guardar.setOnClickListener(v -> {
 
             String nombreTexto = nombre.getText().toString();
+
+            if (nombreTexto.trim().isEmpty()) {
+                Toast.makeText(this,
+                        "Ingresá un nombre para el proyecto",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             String tempoTexto = tempo.getText().toString();
             String ideaTexto = idea.getText().toString();
 
+
+            if (contenedorInstrumentos.getChildCount() == 0) {
+                Toast.makeText(this,
+                        "Agregá al menos un instrumento",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
             String instrumentosTexto = "";
 
             for (int i = 0; i < contenedorInstrumentos.getChildCount(); i++) {
