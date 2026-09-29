@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            String mensaje = "Composición: " + nombreTexto
+            String mensaje = "Proyecto creado: " + nombreTexto
                     + "\nGénero: " + genero.getSelectedItem().toString()
                     + "\nInstrumentos: " + instrumentosTexto
                     + "\nTonalidad: " + tonalidad.getSelectedItem().toString()
