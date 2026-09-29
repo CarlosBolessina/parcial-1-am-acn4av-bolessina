@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Márgenes -->
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_xlarge">24dp</dimen>
+    <dimen name="margin_section">40dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_screen">24dp</dimen>
+
+    <!-- Tamaños de elementos -->
+    <dimen name="image_height">180dp</dimen>
+    <dimen name="idea_height">120dp</dimen>
+
+    <!-- Tamaños de texto -->
+    <dimen name="text_size_label">18sp</dimen>
+    <dimen name="text_size_subtitle">20sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
+
+</resources>
