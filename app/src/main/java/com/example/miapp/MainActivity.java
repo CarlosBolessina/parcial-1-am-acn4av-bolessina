@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import android.widget.LinearLayout;
 
+import android.view.View;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         EditText nombre = findViewById(R.id.edtNombre);
         EditText tempo = findViewById(R.id.edtTempo);
         EditText idea = findViewById(R.id.edtIdea);
+
+        nombre.setHintTextColor(
+                android.graphics.Color.parseColor("#94A3B8")
+        );
+
+        tempo.setHintTextColor(
+                android.graphics.Color.parseColor("#94A3B8")
+        );
+
+        idea.setHintTextColor(
+                android.graphics.Color.parseColor("#94A3B8")
+        );
 
         Button guardar = findViewById(R.id.btnGuardar);
         Button limpiar = findViewById(R.id.btnLimpiar);
@@ -49,11 +63,20 @@ public class MainActivity extends AppCompatActivity {
                 "Otro"
         };
 
-        ArrayAdapter<String> adapterGenero = new ArrayAdapter<>(
+        ArrayAdapter<String> adapterGenero = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_spinner_item,
                 generos
-        );
+        ) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+
+                TextView texto = (TextView) super.getView(position, convertView, parent);
+                texto.setTextColor(android.graphics.Color.parseColor("#334155"));
+
+                return texto;
+            }
+        };
 
         genero.setAdapter(adapterGenero);
 
@@ -66,11 +89,21 @@ public class MainActivity extends AppCompatActivity {
                 "Violín",
                 "Batería"
         };
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_spinner_item,
                 instrumentos
-        );
+        ) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+
+                TextView texto = (TextView) super.getView(position, convertView, parent);
+                texto.setTextColor(android.graphics.Color.parseColor("#334155"));
+
+                return texto;
+            }
+        };
+
         instrumento.setAdapter(adapter);
 
         Spinner tonalidad = findViewById(R.id.spinnerTonalidad);
@@ -85,11 +118,20 @@ public class MainActivity extends AppCompatActivity {
                 "Si"
         };
 
-        ArrayAdapter<String> adapterTonalidad = new ArrayAdapter<>(
+        ArrayAdapter<String> adapterTonalidad = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_spinner_item,
                 tonalidades
-        );
+        ) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+
+                TextView texto = (TextView) super.getView(position, convertView, parent);
+                texto.setTextColor(android.graphics.Color.parseColor("#334155"));
+
+                return texto;
+            }
+        };
 
         tonalidad.setAdapter(adapterTonalidad);
 
@@ -175,6 +217,12 @@ public class MainActivity extends AppCompatActivity {
 
             nuevoInstrumento.setBackgroundResource(
                     android.R.drawable.editbox_background
+            );
+
+            nuevoInstrumento.setBackgroundTintList(
+                    android.content.res.ColorStateList.valueOf(
+                            android.graphics.Color.parseColor("#EFF6FF")
+                    )
             );
 
             contenedorInstrumentos.addView(nuevoInstrumento);
