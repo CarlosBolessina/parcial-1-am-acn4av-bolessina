@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F8FA">
+    android:background="@color/background_main">
 
 
     <ScrollView
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#F1F5F9"
+            android:background="@color/background_content"
             android:padding="@dimen/padding_screen">
 
             <TextView
@@ -31,7 +31,7 @@
                 android:gravity="center"
                 android:text="@string/titulo_principal"
                 android:textSize="@dimen/text_size_title"
-                android:textColor="#172554"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold" />
 
             <ImageView
@@ -49,7 +49,7 @@
                 android:layout_marginBottom="@dimen/margin_section"
                 android:text="@string/subtitulo_nuevo_proyecto"
                 android:textSize="@dimen/text_size_subtitle"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textStyle="bold" />
 
             <TextView
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_tiny"
                 android:text="@string/label_nombre"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <EditText
@@ -65,8 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_section"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:hint="@string/hint_nombre" />
 
             <TextView
@@ -74,15 +74,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="@string/label_genero"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <Spinner
                 android:id="@+id/spinnerGenero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:layout_marginBottom="@dimen/margin_section" />
 
             <TextView
@@ -90,15 +90,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="@string/label_instrumentos"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <Spinner
                 android:id="@+id/spinnerInstrumento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:layout_marginBottom="@dimen/margin_large" />
 
             <Button
@@ -106,8 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_medium"
-                android:backgroundTint="#60A5FA"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/button_add"
+                android:textColor="@color/text_on_button"
                 android:text="@string/boton_agregar_instrumento" />
 
             <TextView
@@ -129,15 +129,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="@string/label_tonalidad"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <Spinner
                 android:id="@+id/spinnerTonalidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:layout_marginBottom="@dimen/margin_section" />
 
             <TextView
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="@string/hint_tempo"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <EditText
@@ -154,8 +154,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_section"
                 android:hint="@string/label_tempo"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:inputType="number" />
 
             <TextView
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="@string/label_idea"
-                android:textColor="#334155"
+                android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_label" />
 
             <EditText
@@ -173,8 +173,8 @@
                 android:layout_marginBottom="@dimen/margin_medium"
                 android:gravity="top"
                 android:hint="@string/hint_idea"
-                android:backgroundTint="#94A3B8"
-                android:textColor="#334155"
+                android:backgroundTint="@color/border"
+                android:textColor="@color/text_secondary"
                 android:inputType="textMultiLine" />
 
             <LinearLayout
@@ -187,8 +187,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#94A3B8"
-                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/border"
+                    android:textColor="@color/text_on_button"
                     android:text="@string/boton_limpiar" />
 
                 <Button
@@ -197,8 +197,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_small"
                     android:layout_weight="1"
-                    android:backgroundTint="#2563EB"
-                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/button_primary"
+                    android:textColor="@color/text_on_button"
                     android:text="@string/boton_crear" />
 
             </LinearLayout>
