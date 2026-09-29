@@ -30,6 +30,23 @@
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/imgMusica"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/musica"
+                android:contentDescription="Imagen relacionada con composición musical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Nuevo proyecto de composición"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
